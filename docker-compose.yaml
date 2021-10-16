@@ -6,16 +6,24 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - .:/Application
-      - ./site.conf:/etc/nginx/conf.d/default.conf
+      - ./php:/Application
+      - ./php/site.conf:/etc/nginx/conf.d/default.conf
     links:
       - fpm
   fpm:
-    build: ./docker
+    build: ./docker/php
     ports:
       - "9000:9000"
     volumes:
-      - .:/Application
+      - ./php:/Application
+    links:
+      - db
+  node:
+    build: ./docker/node
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./node:/Application
     links:
       - db
   db:

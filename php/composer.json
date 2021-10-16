@@ -61,9 +61,9 @@
             "@auto-scripts"
         ],
         "test-init": [
-            "php bin/console --env=test doctrine:database:create --if-not-exists",
-            "php bin/console --env=test doctrine:schema:create",
-            "php bin/console --env=test doctrine:fixtures:load"
+          "php php/bin/console --env=test doctrine:database:create --if-not-exists",
+          "php php/bin/console --env=test doctrine:schema:create",
+          "php php/bin/console --env=test doctrine:fixtures:load"
         ]
     },
     "conflict": {
