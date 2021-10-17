@@ -38,7 +38,7 @@ class Game
     private string $player2;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="json")
      */
     private array $moves = [];
 
