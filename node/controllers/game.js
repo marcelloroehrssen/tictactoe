@@ -14,8 +14,8 @@ const fetch = (id, callable) => {
 exports.create = (req, res) => {
     db.query("insert into game set ?",
         {
-            player1: req.player1 ?? 'guest' + Math.floor(randomInt(0, 1000)),
-            player2: req.player2 ?? 'guest' + Math.floor(randomInt(0, 1000)),
+            player1: req.body.player1 ?? 'guest' + Math.floor(randomInt(0, 1000)),
+            player2: req.body.player2 ?? 'guest' + Math.floor(randomInt(0, 1000)),
             moves: "[]"
         },
         (err, row) => {

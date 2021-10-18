@@ -14,6 +14,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/games', usersRouter);
+app.use('/game', usersRouter);
 
 module.exports = app;

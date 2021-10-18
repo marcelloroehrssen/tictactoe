@@ -26,6 +26,14 @@ services:
       - ./node:/Application
     links:
       - db
+  next:
+    build: ./docker/node
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./next:/Application
+    links:
+      - db
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
