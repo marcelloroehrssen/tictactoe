@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="480f72b7-47a2-42b6-863d-8d7ac46f42f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/next/components/Modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next/pages/api/move.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/next/styles/Modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next/components/GameTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next/styles/GameTable.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/node/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/controllers/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/node/controllers/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/next/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +163,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/next/pages/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/next/styles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -177,8 +173,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Syspack pc\OneDrive\Documents\PHPProject\tictactoe\next\pages\api" />
       <recent name="C:\Users\Syspack pc\OneDrive\Documents\PHPProject\tictactoe\next\styles" />
+      <recent name="C:\Users\Syspack pc\OneDrive\Documents\PHPProject\tictactoe\next\pages\api" />
       <recent name="C:\Users\Syspack pc\OneDrive\Documents\PHPProject\tictactoe\docker\node" />
       <recent name="C:\Users\Syspack pc\OneDrive\Documents\PHPProject\tictactoe\src\Exception" />
       <recent name="C:\Users\Syspack pc\OneDrive\Documents\PHPProject\tictactoe" />
@@ -205,7 +201,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634061660136</updated>
       <workItem from="1634061661357" duration="20728000" />
-      <workItem from="1634386600522" duration="37429000" />
+      <workItem from="1634386600522" duration="40376000" />
     </task>
     <servers />
   </component>

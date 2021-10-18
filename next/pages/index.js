@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import modalStyle from '../styles/Modal.module.css'
 import {useEffect, useState} from "react";
 import Modal from "../components/Modal";
+import GameTable from "../components/GameTable";
 
 const spots = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -27,6 +28,8 @@ const Home = () => {
     })
 
     const [game, setGame] = useState(initialState)
+
+    const [gameList, setGameList] = useState([])
 
     useEffect(() => {
         if (players.player1 === '' || players.player2 === '') {
@@ -53,6 +56,9 @@ const Home = () => {
     }
 
     const handleMove = (index) => () => {
+        if (game.moves[index]) {
+            return
+        }
         showOverlay(true)
         fetch('/api/move',{
             method: 'post',
@@ -65,6 +71,7 @@ const Home = () => {
     }
 
     const handlePlayAgain = () => {
+        setGameList([...gameList, game])
         showOverlay(false)
         showModal(true)
         setGame(initialState)
@@ -76,7 +83,7 @@ const Home = () => {
                 <title>Tictactoe</title>
                 <meta name="description" content="Tictactoe FE" />
             </Head>
-
+            <GameTable games={gameList}/>
             <main className={styles.main}>
                 <div className={styles.playercontainer}>
                     <div className={`${styles.player} ${game.nextToMove === 1 ? styles.nexttomove : ''}`}>{game.player1}</div>
