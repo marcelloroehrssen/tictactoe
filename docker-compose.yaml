@@ -43,6 +43,8 @@ services:
       MYSQL_PASSWORD: tictactoe_pass
       MYSQL_ROOT_PASSWORD: tictactoe_root_user
       MYSQL_DATABASE: tictactoe
+    volumes:
+    - ./mysql:/docker-entrypoint-initdb.d
   adminer:
     image: adminer
     restart: always
