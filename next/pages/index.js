@@ -86,8 +86,12 @@ const Home = () => {
             <GameTable games={gameList}/>
             <main className={styles.main}>
                 <div className={styles.playercontainer}>
-                    <div className={`${styles.player} ${game.nextToMove === 1 ? styles.nexttomove : ''}`}>{game.player1}</div>
-                    <div className={`${styles.player} ${game.nextToMove === 2 ? styles.nexttomove : ''} ${styles.player2}`}>{game.player2}</div>
+                    <div className={`${styles.player} ${game.nextToMove === 1 ? styles.nexttomove : ''}`}>
+                        <span className={styles.playerbadge}>{game.player1 ?? 'Player1'}</span>
+                    </div>
+                    <div className={`${styles.player} ${game.nextToMove === 2 ? styles.nexttomove : ''} ${styles.player2}`}>
+                        <span className={styles.playerbadge}>{game.player2 ?? 'Player1'}</span>
+                    </div>
                 </div>
                 <div className={styles.gamegrid}>
                     {

@@ -3,9 +3,9 @@ const errors = require("../errors/index")
 class Game {
 
     #combos = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], // horizontal
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], // vertical
-        [0, 4, 8], [2, 4, 6],         // obliques
+        ['0', '1', '2'], ['3', '4', '5'], ['6', '7', '8'], // horizontal
+        ['0', '3', '6'], ['1', '4', '7'], ['2', '5', '8'], // vertical
+        ['0', '4', '8'], ['2', '4', '6'],         // obliques
     ];
 
     id
@@ -45,13 +45,17 @@ class Game {
     }
 
     getWinner() {
-        const winner = Math.max(...this.#combos.map((combo) => {
+        const winnigCombo = this.#combos.map((combo) => {
             const [a,b,c] = combo
+            if (!this.moves[a] || !this.moves[b] || !this.moves[c]) {
+                return null
+            }
             if (this.moves[a] === this.moves[b] && this.moves[a] === this.moves[c]) {
                 return this.moves[a];
             }
             return null
-        }))
+        })
+        const winner = Math.max(...winnigCombo)
         this.winner = winner === 0 ? null : winner;
     }
 
