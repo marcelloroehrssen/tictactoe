@@ -8,9 +8,7 @@ const GameTable = ({games}) => {
     const el = useRef(null);
     const [visible, setVisible] = useState(true)
     useEffect(() => {
-        console.log(el.current.style)
         el.current.style.setProperty('height', visible ? '350px' : '35px')
-        console.log(el.current.style)
     }, [visible])
 
     const handleToggle = () => setVisible(!visible)
